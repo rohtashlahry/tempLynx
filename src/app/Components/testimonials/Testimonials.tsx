@@ -15,8 +15,9 @@ const ClientTestimonials: React.FC<ITestimonialProps> = ({ data, logos }) => {
       <div className="max-w-7xl sm:flex sm:gap-8 mx-auto gap-8 lg:p-8">
         <div className="lg:w-1/2 bg-white rounded-2xl p-8 gap-4 mt-2">
           <div className="flex flex-wrap gap-8">
-            {logos?.map((img: any) => (
+            {logos?.map((img: any, index: any) => (
               <img
+              key={index}
                 src={img}
                 alt="alt text"
                 width="auto"

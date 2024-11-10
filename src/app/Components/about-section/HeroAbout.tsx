@@ -1,10 +1,9 @@
 import React from "react";
 import Button from "../button/Button";
-import { FaArrowRightLong } from "react-icons/fa6";
 import TextCard from "../textCard/textCard";
 
 interface IHeroAboutProps {
-  image: any;
+  image: string;
   heading: string;
   subHeading: string;
   p1: string;

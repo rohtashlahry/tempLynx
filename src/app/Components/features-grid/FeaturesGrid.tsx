@@ -1,7 +1,7 @@
 import React from "react";
 
 interface IFeatureGridProps {
-  items: any;
+  items: any[];
 }
 const FeaturesGrid: React.FC<IFeatureGridProps> = ({ items }) => {
   return (

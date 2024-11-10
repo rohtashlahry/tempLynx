@@ -24,7 +24,7 @@ const ContactUsForm: React.FC<IContactCTAProps> = ({
     subject: "",
     message: "",
   });
-  const [captchaDigits, setCaptchaDigits] = useState<any>({
+  const [captchaDigits, setCaptchaDigits] = useState({
     fn: 0,
     sn: 0,
   });

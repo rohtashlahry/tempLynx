@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "../button/Button";
-import Image from "next/image"; // For optimized images
 
 interface IHeroProps {
   heading: string;

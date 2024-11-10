@@ -6,7 +6,7 @@ interface IContactCTAProps {
   heading: string;
   subHeading: string;
   description: string;
-  image: any;
+  image: string;
   buttonLabel: string;
 }
 const ContactCTA: React.FC<IContactCTAProps> = ({
