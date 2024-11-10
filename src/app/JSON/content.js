@@ -6,17 +6,18 @@ import { RiPhoneLockLine } from "react-icons/ri";
 
 const Content = {
   SiteURL: "/",
+  SiteDomain: "/",
   SiteFullTitle: "TempLynx | Solution Redefined",
   SiteDescription: "Solution Redefined",
   SiteTitle: "TempLynx",
   SiteLogo: "" /* Add site logo here */,
   SiteAuthor: "TempLynx Dev",
-  SupportNumber: "+91-000-000-0000",
-  SupportEmail: "info@domain.com",
+  SupportNumber: "+91-9813-7171-24",
+  SupportEmail: "enquiry@templynx.com",
   OfficeAddress: [
     "TempLynx | Solution Redefined",
     "100%, Remote Agency,",
-    "Faridabad, Haryana - 121006",
+    "Faridabad, 121006",
   ],
   SocialMedia: [
     { name: "Facebook", link: "#" },
@@ -78,7 +79,7 @@ const Content = {
         StartTitle: "Exceptional",
         Highlight: "Web Application Development",
         EndTitle: "solution providers with in house team.",
-        Subtitle: "Harness Templynx Web App Development with",
+        Subtitle: "Harness TempLynx Web App Development with",
         Descriptio:
           "Trusted Software Development agency that focus on quality delivery in your area. Provides simplest solution for your complex needs.",
         ButtonLabel: "Get Consultation",
@@ -86,19 +87,19 @@ const Content = {
       AboutUsSection: {
         LeftTitle: "Result Oriented Web Development Solutions",
         StartTitle: "Increase your",
-        Hightlights: "ROI with TempraLynx website development",
+        Hightlights: "ROI with TempLynx website development",
         EndTitle: "services",
         Description:
-          "We are an organically fast growing and leading Digital Marketing Company in New Delhi, INDIA. We create and scale large and complex ad programs with tools designed to maximize efficiency. We aim at providing our best services for your company.",
+          "TempLynx can be interpreted as a name signifying sharp agility and timely precision, blending the idea of being swift and adaptable with a focus on clarity and insight. It evokes a sense of being on the cutting edge, adaptable to changing circumstances, and maintaining sharp vision and clarity in operations. We are an organically fast growing and leading Digital Marketing Company in New Delhi, INDIA. We create and scale large and complex ad programs with tools designed to maximize efficiency. We aim at providing our best services for your company.",
         ButtonLabel: "",
       },
       ServicesSection: {
         Subtitle: "",
         StartTitle: "Grow with",
-        Highlights: "TempraLynx's Services",
+        Highlights: "TempLynx's Services",
         EndTitle: "",
         Description:
-          "We’re TempraLynx, where your unique skills and talents are celebrated. We create and scale large and complex ad programs with tools designed to maximize efficiency. We aim at providing our best services for your company. Since India is now walking on a digital path.",
+          "We’re TempLynx, where your unique skills and talents are celebrated. We create and scale large and complex ad programs with tools designed to maximize efficiency. We aim at providing our best services for your company. Since India is now walking on a digital path.",
         ButtonLabel: "",
         ServicesList: [
           {
@@ -198,13 +199,13 @@ const Content = {
           {
             companyName: "Sculpt Partners",
             review:
-              "Our engagement with TempraLynx started with a revamp of our company website, which had some very specific requirements pertaining to design and functionality. Really appreciate the engagement manager allocated to me who has always listened to our requirements and acted accordingly. Great work team!",
+              "Our engagement with TempLynx started with a revamp of our company website, which had some very specific requirements pertaining to design and functionality. Really appreciate the engagement manager allocated to me who has always listened to our requirements and acted accordingly. Great work team!",
             designation: "Founder",
           },
           {
             companyName: "ShriShankhyam",
             review:
-              "The team at TempraLynx plane the deliverables very well. We really like the way, they married the principles of UX with a functional design which is what we intended for.",
+              "The team at TempLynx plane the deliverables very well. We really like the way, they married the principles of UX with a functional design which is what we intended for.",
             designation: "Director",
           },
           {
@@ -216,7 +217,7 @@ const Content = {
           {
             companyName: "Innabrum Technologies",
             review:
-              "The team at TempraLynx plane the deliverables very well. Really appreciate the engagement manager allocated to me who has always listened to our requirements and acted accordingly. Great work team!",
+              "The team at TempLynx plane the deliverables very well. Really appreciate the engagement manager allocated to me who has always listened to our requirements and acted accordingly. Great work team!",
             designation: "Director",
           },
         ],
@@ -246,7 +247,7 @@ const Content = {
             title:
               "Enabled 3x sales growth with digitalised and modernised solution",
             description:
-              "TempraLynx approached this business with potential growth ideas and results in high increase of ROI in terms of revenue and active users.",
+              "TempLynx approached this business with potential growth ideas and results in high increase of ROI in terms of revenue and active users.",
             activeUsersIncrease: 110,
             revenueIncrease: 35,
             imageUrl: "/assets/case-study1.jpg",
@@ -256,7 +257,7 @@ const Content = {
             title:
               "Enabled 3x sales growth with digitalised and modernised solution",
             description:
-              "TempraLynx approached this business with potential growth ideas and results in high increase of ROI in terms of revenue and active users.",
+              "TempLynx approached this business with potential growth ideas and results in high increase of ROI in terms of revenue and active users.",
             activeUsersIncrease: 120,
             revenueIncrease: 29,
             imageUrl: "/assets/case-study2.jpg",
@@ -266,7 +267,7 @@ const Content = {
             title:
               "Enabled 3x sales growth with digitalised and modernised solution",
             description:
-              "TempraLynx approached this business with potential growth ideas and results in high increase of ROI in terms of revenue and active users.",
+              "TempLynx approached this business with potential growth ideas and results in high increase of ROI in terms of revenue and active users.",
             activeUsersIncrease: 80,
             revenueIncrease: 25,
             imageUrl: "/assets/case-study3.jpg",
