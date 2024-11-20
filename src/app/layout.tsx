@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import Content from "./JSON/content";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -45,11 +46,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         {/* Add additional SEO and performance improvements */}
         <meta name="robots" content="index, follow" />
         <meta name="author" content={Content.SiteAuthor} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <link rel="canonical" href="https://your-website-url.com" />
         <meta
           name="keywords"
@@ -58,9 +60,10 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
         {/* Structured Data for Search Engines */}
       </head>
-      <body className={`${inter.variable}} antialiased`}>
+      <body className={`${inter.variable}} antialiased relative`}>
         <Header textColor="white" background="black" />
         {children}
+        <Analytics/>
         <Footer
           contactNumber={Content.SupportNumber}
           email={Content.SupportEmail}

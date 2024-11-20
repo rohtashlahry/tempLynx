@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi"; // For menu icons
 import Button from "../button/Button";
 import Content from "../../JSON/content";
+import DarkModeToggle from "../dark-mode-toggle/darkModeToggle";
 
 interface IHeaderProps {
   textColor: string;
@@ -20,71 +21,132 @@ const Header: React.FC<IHeaderProps> = ({
 
   return (
     <header
-      className={`flex justify-between items-center p-4 text-${textColor} bg-${background} backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200 sticky top-0 z-10`}
+      className={`flex justify-between items-center p-4 text-${textColor} bg-${background} backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200 sticky top-0 z-10 gap-2`}
     >
       {/* Logo */}
-      <div className="flex items-center">
-        <Link href={Content.HeaderSection.HeaderMenu.Home.url}>
-          <div className="bg-gray-100 p-2 rounded-lg">
-            <span className="text-black text-xl font-bold">
-              {Content.SiteTitle}
-            </span>
+      <div className="flex inline-flex items-center">
+        <Link href="/">
+          <div className="bg-gray-100 p-1 rounded w-32">
+            <img
+              src="assets/templynx.png"
+              alt="templynx logo"
+              width="auto"
+              height="auto"
+            />
           </div>
         </Link>
       </div>
 
-      {/* Mobile Menu Icon */}
-      <div className="lg:hidden" onClick={toggleMenu}>
-        {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-      </div>
-
       {/* Navigation Menu */}
-      <nav
-        className={`${
-          isMenuOpen ? "block" : "hidden"
-        } lg:flex flex-col lg:flex-row justify-around items-center lg:space-x-6 text-base font-medium text-${textColor} absolute lg:static top-16 left-0 ${
-          isMenuOpen ? "w-full" : ""
-        } bg-white lg:bg-transparent p-4 lg:p-0 border-t lg:border-none`}
-      >
-        {Content.HeaderSection.HeaderMenu && (
-          <ul className="lg:flex space-y-4 lg:space-y-0 lg:space-x-6 w-full lg:w-auto text-center">
-            <li>
-              <Link href={Content.HeaderSection.HeaderMenu.AboutUs.url}>
-                {Content.HeaderSection.HeaderMenu.AboutUs.title}
-              </Link>
-            </li>
-            <li>
-              <Link href={Content.HeaderSection.HeaderMenu.Services.url}>
-                {Content.HeaderSection.HeaderMenu.Services.title}
-              </Link>
-            </li>
-            <li>
-              <Link href={Content.HeaderSection.HeaderMenu.Portfolio.url}>
-                {Content.HeaderSection.HeaderMenu.Portfolio.title}
-              </Link>
-            </li>
-            {/* <li>
-              <Link href={Content.HeaderMenu.Blog.url}>
-                {Content.HeaderMenu.Blog.title}
-              </Link>
-            </li> */}
-            <li>
-              <Link href={Content.HeaderSection.HeaderMenu.ContactUs.url}>
-                {Content.HeaderSection.HeaderMenu.ContactUs.title}
-              </Link>
-            </li>
-          </ul>
-        )}
+      <nav className="text-left hidden lg:block">
+        <ul className="lg:flex lg:space-x-2 w-full lg:w-auto text-center">
+          {Content.HeaderSection.HeaderMenu?.map((item: any) => {
+            return (
+              <li>
+                <Link
+                  href={item.url}
+                  className="hover:bg-gray-700 px-3 py-2 rounded-md"
+                >
+                  {item.title}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </nav>
 
-      {/* Button on larger screens */}
-      <div className="hidden lg:block">
-        <Button
-          label={Content.HeaderSection.HeaderButtonLabel}
-          variant="stylist"
-          size="medium"
-        />
+      <div className="gap-2 flex">
+        {/* Button for Dark Mode      //TODO: need to enable it in next release */}
+        {/* <div className="inline">
+          <DarkModeToggle />
+        </div> */}
+
+        {/* Button on larger screens */}
+        <div className="hidden lg:block">
+          <Link href={Content.HeaderSection.HeaderButtonLabel.url}>
+            <Button
+              label={Content.HeaderSection.HeaderButtonLabel.ButtonTitle}
+              variant="stylist"
+              size="medium"
+            />
+          </Link>
+        </div>
+
+        {/* Mobile dropdown bar icon */}
+        <div
+          className="border rounded-full p-2 cursor-pointer lg:hidden"
+          onClick={toggleMenu}
+        >
+          {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+        </div>
       </div>
+
+      {/* Mobile menu drawer */}
+
+      {isMenuOpen && (
+        <div className="absolute bg-gray-600" onClick={toggleMenu}>
+          <div
+            className="fixed right-0 top-0 h-dvh w-full bg-gray-600 transition-transform transform translate-x-full"
+            style={{
+              transform: isMenuOpen ? "translateX(0)" : "translateX(100%)",
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <header
+              className={`flex justify-between items-center p-4 text-${textColor} bg-${background} backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200 sticky top-0 z-10 gap-2`}
+            >
+              {/* Mobile Logo */}
+              <div className="flex inline-flex items-center">
+                <Link href="/">
+                  <div className="bg-gray-100 p-1 rounded w-32">
+                    <img
+                      src="assets/templynx.png"
+                      alt="templynx logo"
+                      width="auto"
+                      height="auto"
+                    />
+                  </div>
+                </Link>
+              </div>
+              {/* Close Button */}
+              <div
+                className="border rounded-full p-2 cursor-pointer lg:hidden"
+                onClick={toggleMenu}
+              >
+                <FiX size={24} />
+              </div>
+            </header>
+            {/* Mobile menu items */}
+            <div className="relative p-2 bg-gray-600">
+              <nav className="text-left lg:hidden">
+                <ul className="lg:space-x-2 w-full lg:w-auto text-left gap-2">
+                  {Content.HeaderSection.HeaderMenu?.map((item: any) => {
+                    return (
+                      <li className="gap-2">
+                        <Link
+                          href={item.url}
+                          className="px-3 py-2 rounded-md block"
+                        >
+                          {item.title}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </nav>
+              <div className="lg:hidden mt-4 px-3">
+                <Link href={Content.HeaderSection.HeaderButtonLabel.url}>
+                  <Button
+                    label={Content.HeaderSection.HeaderButtonLabel.ButtonTitle}
+                    variant="stylist"
+                    size="medium"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

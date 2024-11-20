@@ -1,6 +1,7 @@
 import React from "react";
 import "../../globals.css";
 import Button from "../button/Button";
+import Link from "next/link";
 
 interface Stat {
   value: string;
@@ -13,7 +14,7 @@ interface StatisticsProps {
   highlight: string;
   subtitle: string;
   stats: Stat[];
-  buttonText: string;
+  buttonData: any;
 }
 
 const Statistics: React.FC<StatisticsProps> = ({
@@ -21,7 +22,7 @@ const Statistics: React.FC<StatisticsProps> = ({
   highlight,
   subtitle,
   stats,
-  buttonText,
+  buttonData,
 }) => {
   return (
     <div className="bg-gradient-to-r from-indigo-600 to-gray-300 text-white py-10 px-4 sm:px-6 md:px-10 lg:px-20 flex flex-col lg:flex-row items-center lg:items-start justify-between items-center">
@@ -34,7 +35,11 @@ const Statistics: React.FC<StatisticsProps> = ({
           </span>
         </h1>
         <p className="text-base sm:text-lg md:text-xl mb-6">{subtitle}</p>
-        <Button label={buttonText} variant="stylist" />
+        {buttonData && (
+          <Link href={buttonData.url}>
+            <Button label={buttonData.title} variant="stylist" />
+          </Link>
+        )}
       </div>
 
       {/* Right Section - Statistics */}

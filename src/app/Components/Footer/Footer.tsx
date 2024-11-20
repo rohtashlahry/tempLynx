@@ -1,4 +1,5 @@
 import Content from "@/app/JSON/content";
+import Link from "next/link";
 
 interface FooterProps {
   contactNumber: string;
@@ -62,8 +63,9 @@ const Footer: React.FC<FooterProps> = ({
       </div>
 
       {/* Copyright section */}
-      <div className="mt-8 text-center border-t border-gray-300 pt-4">
+      <div className="flex justify-between mt-8 text-center border-t border-gray-300 pt-4">
         <p>&copy; 2024 {Content.SiteTitle} | All Rights Reserved</p>
+        <p><Link href="/privacy-policy">Privacy Policy</Link> | <Link href="/terms-conditions">Terms of Use</Link></p>
       </div>
     </footer>
   );

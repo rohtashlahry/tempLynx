@@ -22,13 +22,13 @@ export default function Home() {
           endTitle={Content.Pages.Landing.HeroBanner.EndTitle}
           subtitle={Content.Pages.Landing.HeroBanner.Subtitle}
           description={Content.Pages.Landing.HeroBanner.Descriptio}
-          buttonLabel={Content.Pages.Landing.HeroBanner.ButtonLabel}
+          ButtonData={Content.Pages.Landing.HeroBanner.ButtonData}
         />
       </section>
       <section aria-label="Client logos">
         <ClientelSlider logos={Content.ClientLogosSection.LogosList} />
       </section>
-      <section aria-label="About us">
+      <section aria-label="About us" id="about-us">
         <AboutUs
           leftTitle={Content.Pages.Landing.AboutUsSection.LeftTitle}
           startTitle={Content.Pages.Landing.AboutUsSection.StartTitle}
@@ -44,10 +44,10 @@ export default function Home() {
           highlight={Content.Pages.Landing.StatisticsSection.Highlight}
           subtitle={Content.Pages.Landing.StatisticsSection.Subtitle}
           stats={Content.Pages.Landing.StatisticsSection.StatsNumbers}
-          buttonText={Content.Pages.Landing.StatisticsSection.ButtonText}
+          buttonData={Content.Pages.Landing.StatisticsSection.ButtonText}
         />
       </section>
-      <section aria-label="Services">
+      <section aria-label="Services" id="services">
         <Services
           serviceList={Content.Pages.Landing.ServicesSection.ServicesList}
           subtitle={Content.Pages.Landing.ServicesSection.Subtitle}
@@ -58,12 +58,12 @@ export default function Home() {
           buttonLabel={Content.Pages.Landing.ServicesSection.ButtonLabel}
         />
       </section>
-      <section aria-label="Portfolio">
+      <section aria-label="Case Studies" id="case-studies">
         <CaseStudySlider
           caseStudies={Content.Pages.Landing.CaseStudySection.CaseStudies}
         />
       </section>
-      <section aria-label="Contact Us Form" className="p-8">
+      <section aria-label="Process flow" className="p-8">
         <div className="flex items-center justify-center">
           <div className="w-2/3">
             <ContentField
@@ -90,13 +90,14 @@ export default function Home() {
           logos={Content.Pages.Landing.TestimonialsSection.TestimonialsLogos}
         />
       </section>
-      <section aria-label="Contact Us Form">
+      <section aria-label="Contact Us Form" id="contact-us">
         <ContactUsForm
           startTitle={Content.Pages.Landing.ContactUsSection.StartTitle}
           highlights={Content.Pages.Landing.ContactUsSection.Highlights}
           endTitle={Content.Pages.Landing.ContactUsSection.EndTitle}
           subHeading={Content.Pages.Landing.ContactUsSection.Subheading}
           description={Content.Pages.Landing.ContactUsSection.Description}
+          ButtonData={Content.Pages.Landing.ContactUsSection.ButtonData}
         />
       </section>
       <section aria-label="Jump to Top">

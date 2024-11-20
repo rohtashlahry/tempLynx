@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../button/Button";
+import Link from "next/link";
 
 interface IContentFieldProps {
   subTitle?: string;
@@ -7,7 +8,7 @@ interface IContentFieldProps {
   highlights?: string;
   endTitle?: string;
   description?: string;
-  buttonLabel?: string;
+  buttonData?: any;
   alignment?: string;
 }
 
@@ -17,7 +18,7 @@ const ContentField: React.FC<IContentFieldProps> = ({
   highlights,
   endTitle,
   description,
-  buttonLabel,
+  buttonData,
   alignment = "left",
 }) => {
   return (
@@ -40,8 +41,10 @@ const ContentField: React.FC<IContentFieldProps> = ({
             {description}
           </p>
         )}
-        {buttonLabel && (
-          <Button label={buttonLabel} variant="stylist" size="large" />
+        {buttonData && (
+          <Link href={buttonData.url}>
+            <Button label={buttonData.title} variant="stylist" size="large" />
+          </Link>
         )}
       </div>
     </div>

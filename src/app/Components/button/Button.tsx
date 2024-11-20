@@ -1,10 +1,11 @@
 import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  label: string;
+  label?: string;
   icon?: React.ReactNode;
-  variant?: "primary" | "secondary" | "outline" | "stylist" | "stylistOutline";
+  variant?: "primary" | "secondary" | "outline" | "stylist" | "stylistOutline" | "ibutton";
   size?: "small" | "medium" | "large";
+  children?: any
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -24,6 +25,7 @@ const Button: React.FC<ButtonProps> = ({
     stylistOutline: "",
     outline:
       "bg-transparent text-blue-600 border-2 border-blue-600 hover:opacity-90",
+      ibutton: "focus:ring-red-100 bg-gray-700 hover:bg-gray-600",
   };
 
   // Tailwind classes for different sizes

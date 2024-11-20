@@ -9,6 +9,7 @@ interface IContactCTAProps {
   highlights: string;
   subHeading: string;
   description: string;
+  ButtonData: any;
 }
 
 const ContactUsForm: React.FC<IContactCTAProps> = ({
@@ -17,6 +18,7 @@ const ContactUsForm: React.FC<IContactCTAProps> = ({
   endTitle,
   subHeading,
   description,
+  ButtonData
 }) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -71,7 +73,7 @@ const ContactUsForm: React.FC<IContactCTAProps> = ({
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
         <div className="flex text-left items-center">
           <ContentField
             subTitle={subHeading}
@@ -79,9 +81,11 @@ const ContactUsForm: React.FC<IContactCTAProps> = ({
             endTitle={endTitle}
             highlights={highlights}
             description={description}
+            alignment="center"
+            buttonData={ButtonData}
           />
         </div>
-        <div className="text-white bg-gradient-to-r from-gray-700 to-gray-900 rounded-2xl p-6">
+        {false && <div className="text-white bg-gradient-to-r from-gray-700 to-gray-900 rounded-2xl p-6">
           <form onSubmit={handleSubmit} className="space-y-6" noValidate>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name Field */}
@@ -188,7 +192,7 @@ const ContactUsForm: React.FC<IContactCTAProps> = ({
               />
             </div>
           </form>
-        </div>
+        </div>}
       </div>
     </div>
   );

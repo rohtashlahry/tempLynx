@@ -12,29 +12,26 @@ const Content = {
   SiteTitle: "TempLynx",
   SiteLogo: "" /* Add site logo here */,
   SiteAuthor: "TempLynx Dev",
-  SupportNumber: "+91-9813-7171-24",
-  SupportEmail: "enquiry@templynx.com",
+  SupportNumber: "",
+  SupportEmail: "rohtashatbiz@gmail.com",
   OfficeAddress: [
     "TempLynx | Solution Redefined",
     "100%, Remote Agency,",
     "Faridabad, 121006",
   ],
-  SocialMedia: [
-    { name: "Facebook", link: "#" },
-    { name: "Instagram", link: "#" },
-    { name: "LinkedIn", link: "#" },
-  ],
+  SocialMedia: [{ name: "LinkedIn", link: "#" }],
   SiteKeywords: "" /*--TODO--SEO Keywords here*/,
   HeaderSection: {
-    HeaderMenu: {
-      Home: { title: "Home", url: "/" },
-      Services: { title: "Services", url: "/" },
-      Portfolio: { title: "Portfolio", url: "/" },
-      Blog: { title: "Blog", url: "/" },
-      AboutUs: { title: "About Us", url: "/" },
-      ContactUs: { title: "Contact Us", url: "/" },
+    HeaderMenu: [
+      { title: "About Us", url: "/#about-us" },
+      { title: "Services", url: "/#services" },
+      { title: "Case Study", url: "/#case-studies" },
+      { title: "Contact Us", url: "/#contact-us" },
+    ],
+    HeaderButtonLabel: {
+      ButtonTitle: "Discuss Over Coffee!",
+      url: "mailto:rohtashatbiz@gmail.com",
     },
-    HeaderButtonLabel: "Discuss Over Coffee!",
   },
   FooterSection: {
     CopyRight: "@ 2024",
@@ -82,7 +79,10 @@ const Content = {
         Subtitle: "Harness TempLynx Web App Development with",
         Descriptio:
           "Trusted Software Development agency that focus on quality delivery in your area. Provides simplest solution for your complex needs.",
-        ButtonLabel: "Get Consultation",
+        ButtonData: {
+          title: "Get Consultation",
+          url: "mailto:rohtashatbiz@gmail.com",
+        },
       },
       AboutUsSection: {
         LeftTitle: "Result Oriented Web Development Solutions",
@@ -132,36 +132,16 @@ const Content = {
           },
         ],
       },
-      // FeatureSection: {
-      //   FeatureSubHeading: "Features",
-      //   FeaturesHeading: "Digital system for our business",
-      //   FeatureData: [
-      //     {
-      //       id: 1,
-      //       title: "General concept",
-      //       description:
-      //         "Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.",
-      //     },
-      //     {
-      //       id: 2,
-      //       title: "Post product",
-      //       description:
-      //         "Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.",
-      //     },
-      //     {
-      //       id: 3,
-      //       title: "Design process",
-      //       description:
-      //         "Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.",
-      //     },
-      //   ],
-      // },
+
       StatisticsSection: {
         Title: "Get your true",
         Highlight: "Potential with out Digital Change",
         Subtitle:
           "Let's guide you through a seamless transformation process with out best in house team. We focus on delivering quality product with less headache.",
-        ButtonText: "Talk To Our Experts",
+        ButtonText: {
+          title: "Talk To Our Experts",
+          url: "mailto:rohtashatbiz@gmail.com",
+        },
         StatsNumbers: [
           {
             value: "12+",
@@ -337,6 +317,10 @@ const Content = {
         Subheading: "Reach out",
         Description:
           "Let's get started on your digital transformation journey. Submit your inquiry today, and our experts will be in touch with you soon.",
+        ButtonData: {
+          title: "Discuss your project",
+          url: "mailto:rohtashatbiz@gmail.com",
+        },
       },
     },
   },
