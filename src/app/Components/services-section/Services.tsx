@@ -30,7 +30,7 @@ const Services: React.FC<IServicesProps> = ({
             highlights={highlights}
             endTitle={endTitle}
             description={description}
-            buttonLabel={buttonLabel}
+            buttonData={buttonLabel}
             alignment="center"
           />
         </div>

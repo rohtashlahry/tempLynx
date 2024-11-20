@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi"; // For menu icons
 import Button from "../button/Button";
 import Content from "../../JSON/content";
-import DarkModeToggle from "../dark-mode-toggle/darkModeToggle";
+// import DarkModeToggle from "../dark-mode-toggle/darkModeToggle";
 
 interface IHeaderProps {
   textColor: string;
@@ -40,9 +40,9 @@ const Header: React.FC<IHeaderProps> = ({
       {/* Navigation Menu */}
       <nav className="text-left hidden lg:block">
         <ul className="lg:flex lg:space-x-2 w-full lg:w-auto text-center">
-          {Content.HeaderSection.HeaderMenu?.map((item: any) => {
+          {Content.HeaderSection.HeaderMenu?.map((item: any, index: any) => {
             return (
-              <li>
+              <li key={index}>
                 <Link
                   href={item.url}
                   className="hover:bg-gray-700 px-3 py-2 rounded-md"
@@ -120,9 +120,9 @@ const Header: React.FC<IHeaderProps> = ({
             <div className="relative p-2 bg-gray-600">
               <nav className="text-left lg:hidden">
                 <ul className="lg:space-x-2 w-full lg:w-auto text-left gap-2">
-                  {Content.HeaderSection.HeaderMenu?.map((item: any) => {
+                  {Content.HeaderSection.HeaderMenu?.map((item: any, index: any) => {
                     return (
-                      <li className="gap-2">
+                      <li className="gap-2" key={index}>
                         <Link
                           href={item.url}
                           className="px-3 py-2 rounded-md block"

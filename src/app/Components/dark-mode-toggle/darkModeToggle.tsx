@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "../button/Button";
 import { HiSun } from "react-icons/hi";
-import { HiOutlineSun } from "react-icons/hi";
 import { IoIosMoon } from "react-icons/io";
 
 const DarkModeToggle: React.FC = () => {
